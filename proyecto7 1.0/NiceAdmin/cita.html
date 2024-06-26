@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Agendar cita</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!--Archivos Vendor CSS-->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Plantilla Main CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="dashboard.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Clínica Santa María</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- Fin Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- Fin de barra de búsqueda -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- Fin del ícono de búsqueda-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              Tienes 4 notificaciones nuevas
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Ver todas</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Nueva notificación</h4>
+                <p>...</p>
+                <p>Hace 30 minutos</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Problema de seguridad</h4>
+                <p>...</p>
+                <p>Hace 1 hora</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Solicitud aprobada</h4>
+                <p>...</p>
+                <p>Hace 2 horas</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Tal vez quieras saber algo</h4>
+                <p>...</p>
+                <p>Hace 4 horas</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Ver todas las notificaciones</a>
+            </li>
+
+          </ul><!-- Fin Dropdown de notificaciones -->
+
+        </li><!-- Fin Nav de notificación -->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- Fin Ícono de mensajes -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              Tienes 3 mensajes
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Ver todos</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Especialista María Martinez</h4>
+                  <p>...</p>
+                  <p>Hace 4 horas</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Pediatra Ana Paez</h4>
+                  <p>...</p>
+                  <p>Hace 6 horas</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Ginecólogo David Laid</h4>
+                  <p>...</p>
+                  <p>Hace 8 horas</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Ver todos los mensajes</a>
+            </li>
+
+          </ul><!-- Fin Dropdown de mensajes -->
+
+        </li><!-- Fin Nav de mensajes -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Dr. Kevin Pérez</span>
+          </a><!-- Fin imagen de ícono de perfil -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Pérez</h6>
+              <span>Médico cirujano</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-login.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Cerrar sesión</span>
+              </a>
+            </li>
+
+          </ul><!-- Fin Dropdown de perfil -->
+        </li><!-- Fin Nav de perfil -->
+
+      </ul>
+    </nav><!-- Fin íconos de navegación -->
+
+  </header><!-- Fin del Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="dashboard.html">
+          <i class="bi bi-grid"></i>
+          <span>Panel</span>
+        </a>
+      </li><!-- Fin Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="personal.html">
+          <i class="bi bi-diagram-3-fill"></i>
+          <span>Registrar personal</span>
+        </a>
+      </li><!-- Fin página de personal del nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="paciente.html">
+          <i class="bi bi-file-person"></i>
+          <span>Registrar paciente</span>
+        </a>
+      </li><!-- Fin página de paciente del nav -->
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="cita.html">
+          <i class="bi bi-clipboard-plus"></i>
+          <span>Programar cita</span>
+        </a>
+      </li><!-- Fin página de medicamentos del nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="orden.html">
+          <i class="bi bi-clipboard-plus"></i>
+          <span>Orden médica</span>
+        </a>
+      </li><!-- Fin página de medicamentos del nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="receta.html">
+          <i class="bi bi-clipboard-data"></i>
+          <span>Receta médica</span>
+        </a>
+      </li><!-- Fin página de evolución del nav -->
+    </ul>
+
+  </aside><!-- fin del Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Registrar nueva cita</h1> 
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="dashboard.html">Panel</a></li>
+          <li class="breadcrumb-item">Formularios</li>
+          <li class="breadcrumb-item active">Registro de cita</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Registrar nueva cita</h5>
+
+              <!-- Multi Columns Form -->
+              <form>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required="">
+                </div>
+                <div class="mb-3">
+                  <label for="apellido" class="form-label">Apellido</label>
+                  <input type="text" class="form-control" id="apellido" placeholder="Ingresa tu apellido" required="">
+                </div>
+                <div class="mb-3">
+                  <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                  <input type="date" class="form-control" id="fechaNacimiento" required="">
+                </div>
+                <div class="mb-3">
+                  <label for="genero" class="form-label">Género</label>
+                  <select class="form-select" id="genero" required="">
+                    <option value="">Selecciona tu género</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="correo" class="form-label">Correo Electrónico</label>
+                  <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com" required="">
+                </div>
+                <div class="mb-3">
+                  <label for="telefono" class="form-label">Número de Teléfono</label>
+                  <input type="tel" class="form-control" id="telefono" placeholder="123-456-7890" required="">
+                </div>
+                <div class="mb-3">
+                  <label for="tipoConsulta" class="form-label">Tipo de Consulta</label>
+                  <select class="form-select" id="tipoConsulta" required="">
+                    <option value="">Selecciona el tipo de consulta</option>
+                    <option value="general">Consulta General</option>
+                    <option value="especialista">Consulta con Especialista</option>
+                    <option value="urgencias">Urgencias</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="fechaPreferida" class="form-label">Fecha Preferida</label>
+                  <input type="date" class="form-control" id="fechaPreferida" required="">
+                </div>
+                <div class="mb-3">
+                  <label for="horaPreferida" class="form-label">Hora Preferida</label>
+                  <input type="time" class="form-control" id="horaPreferida" required="">
+                </div>
+                <div class="mb-3">
+                  <label for="notas" class="form-label">Notas Adicionales</label>
+                  <textarea class="form-control" id="notas" rows="3" placeholder="Ingresa cualquier información adicional"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+              </form><!-- End Multi Columns Form -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Clínica Santa María.</span></strong>. Todos los derechos reservados
+    </div>
+    <div class="credits">
+      Diseñado por <a href="#">Cristian Dev.</a>
+    </div>
+  </footer><!-- Fin Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html> 

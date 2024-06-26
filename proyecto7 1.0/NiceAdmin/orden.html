@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Nueva orden médica</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!--Archivos Vendor CSS-->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Plantilla Main CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="dashboard.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Clínica Santa María</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- Fin Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- Fin de barra de búsqueda -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- Fin del ícono de búsqueda-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              Tienes 4 notificaciones nuevas
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Ver todas</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Nueva notificación</h4>
+                <p>...</p>
+                <p>Hace 30 minutos</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Problema de seguridad</h4>
+                <p>...</p>
+                <p>Hace 1 hora</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Solicitud aprobada</h4>
+                <p>...</p>
+                <p>Hace 2 horas</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Tal vez quieras saber algo</h4>
+                <p>...</p>
+                <p>Hace 4 horas</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Ver todas las notificaciones</a>
+            </li>
+
+          </ul><!-- Fin Dropdown de notificaciones -->
+
+        </li><!-- Fin Nav de notificación -->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- Fin Ícono de mensajes -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              Tienes 3 mensajes
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Ver todos</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Especialista María Martinez</h4>
+                  <p>...</p>
+                  <p>Hace 4 horas</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Pediatra Ana Paez</h4>
+                  <p>...</p>
+                  <p>Hace 6 horas</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <div>
+                  <h4>Ginecólogo David Laid</h4>
+                  <p>...</p>
+                  <p>Hace 8 horas</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Ver todos los mensajes</a>
+            </li>
+
+          </ul><!-- Fin Dropdown de mensajes -->
+
+        </li><!-- Fin Nav de mensajes -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Dr. Kevin Pérez</span>
+          </a><!-- Fin imagen de ícono de perfil -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Pérez</h6>
+              <span>Médico cirujano</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-login.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Cerrar sesión</span>
+              </a>
+            </li>
+
+          </ul><!-- Fin Dropdown de perfil -->
+        </li><!-- Fin Nav de perfil -->
+
+      </ul>
+    </nav><!-- Fin íconos de navegación -->
+
+  </header><!-- Fin del Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="dashboard.html">
+          <i class="bi bi-grid"></i>
+          <span>Panel</span>
+        </a>
+      </li><!-- Fin Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="personal.html">
+          <i class="bi bi-diagram-3-fill"></i>
+          <span>Registrar personal</span>
+        </a>
+      </li><!-- Fin página de personal del nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="paciente.html">
+          <i class="bi bi-file-person"></i>
+          <span>Registrar paciente</span>
+        </a>
+      </li><!-- Fin página de paciente del nav -->
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="cita.html">
+          <i class="bi bi-clipboard-plus"></i>
+          <span>Programar cita</span>
+        </a>
+      </li><!-- Fin página de medicamentos del nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="orden.html">
+          <i class="bi bi-clipboard-plus"></i>
+          <span>Orden médica</span>
+        </a>
+      </li><!-- Fin página de medicamentos del nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="receta.html">
+          <i class="bi bi-clipboard-data"></i>
+          <span>Receta médica</span>
+        </a>
+      </li><!-- Fin página de evolución del nav -->
+    </ul>
+
+  </aside><!-- fin del Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Nueva orden médica</h1> 
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="dashboard.html">Panel</a></li>
+          <li class="breadcrumb-item">Formularios</li>
+          <li class="breadcrumb-item active">Orden médica</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <section class="section">
+
+      <div class="card card-custom border-0 p-3">
+      
+        <!-- pestañas -->
+        <ul class="nav nav-tabs nav-tabs-bordered mb-3" role="tablist">
+        
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-personal-tab" data-bs-toggle="pill" data-bs-target="#pills-personal" type="button" role="tab" aria-controls="pills-personal" aria-selected="true">Datos del paciente</button>
+          </li>
+      
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contacto-tab" data-bs-toggle="pill" data-bs-target="#pills-contacto" type="button" role="tab" aria-controls="pills-contacto" aria-selected="false" tabindex="-1">Datos del médico</button>
+          </li>
+      
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-medica-tab" data-bs-toggle="pill" data-bs-target="#pills-medica" type="button" role="tab" aria-controls="pills-medica" aria-selected="false" tabindex="-1">Datos de la orden</button>
+          </li>
+  
+        </ul>
+        
+        <form>
+          <div class="tab-content" id="pills-tabContent">
+            <!-- Información Personal -->
+            <div class="tab-pane fade form-section active show" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
+                    <div class="mb-3">
+                        <label for="patientName" class="form-label">Nombre del Paciente</label>
+                        <input type="text" class="form-control" id="patientName" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="patientAge" class="form-label">Edad</label>
+                        <input type="number" class="form-control" id="patientAge" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="patientGender" class="form-label">Género</label>
+                        <select class="form-select" id="patientGender" required="">
+                            <option value="">Seleccione...</option>
+                            <option value="male">Masculino</option>
+                            <option value="female">Femenino</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+            </div>
+            <!-- Información de Contacto -->
+            <div class="tab-pane fade form-section" id="pills-contacto" role="tabpanel" aria-labelledby="pills-contacto-tab">
+                    <div class="mb-3">
+                        <label for="doctorName" class="form-label">Nombre del Médico</label>
+                        <input type="text" class="form-control" id="doctorName" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="doctorLicense" class="form-label">Número de Licencia</label>
+                        <input type="text" class="form-control" id="doctorLicense" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="doctorSpecialty" class="form-label">Especialidad</label>
+                        <input type="text" class="form-control" id="doctorSpecialty" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="doctorContact" class="form-label">Contacto</label>
+                        <input type="text" class="form-control" id="doctorContact" required="">
+                    </div>
+            </div>
+            <!-- Información Médica -->
+            <div class="tab-pane fade form-section" id="pills-medica" role="tabpanel" aria-labelledby="pills-medica-tab">
+                    <div class="mb-3">
+                        <label for="orderDate" class="form-label">Fecha de la Orden</label>
+                        <input type="date" class="form-control" id="orderDate" required="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="orderType" class="form-label">Tipo de Orden</label>
+                        <select class="form-select" id="orderType" required="">
+                            <option value="">Seleccione...</option>
+                            <option value="labTest">Prueba de Laboratorio</option>
+                            <option value="imaging">Imagenología</option>
+                            <option value="therapy">Terapia</option>
+                            <option value="consultation">Consulta</option>
+                            <option value="other">Otro</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="orderDetails" class="form-label">Detalles de la Orden</label>
+                        <textarea class="form-control" id="orderDetails" rows="3" required=""></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="orderNotes" class="form-label">Notas Adicionales</label>
+                        <textarea class="form-control" id="orderNotes" rows="3"></textarea>
+                    </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Clínica Santa María.</span></strong>. Todos los derechos reservados
+    </div>
+    <div class="credits">
+      Diseñado por <a href="#">Cristian Dev.</a>
+    </div>
+  </footer><!-- Fin Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html> 

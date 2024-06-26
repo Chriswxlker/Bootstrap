@@ -1,0 +1,755 @@
+<!DOCTYPE html> 
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Panel</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!--Archivos Vendor CSS-->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Plantilla Main CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="dashboard.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png">
+        <span class="d-none d-lg-block">Clínica Santa María</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- Fin Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" placeholder="Buscar">
+        <button type="submit"><i class="bi bi-f"></i></button>
+      </form>
+    </div><!-- Fin de barra de búsqueda -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- Fin del ícono de búsqueda-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              Tienes 4 notificaciones nuevas
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Ver todas</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Nueva notificación</h4>
+                <p>...</p>
+                <p>Hace 30 minutos</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Problema de seguridad</h4>
+                <p>...</p>
+                <p>Hace 1 hora</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Solicitud aprobada</h4>
+                <p>...</p>
+                <p>Hace 2 horas</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Tal vez quieras saber algo</h4>
+                <p>...</p>
+                <p>Hace 4 horas</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Ver todas las notificaciones</a>
+            </li>
+
+          </ul><!-- Fin Dropdown de notificaciones -->
+
+        </li><!-- Fin Nav de notificación -->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success badge-number">3</span>
+          </a><!-- Fin Ícono de mensajes -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              Tienes 3 mensajes
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">Ver todos</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-1.jpg" class="rounded-circle">
+                <div>
+                  <h4>Especialista María Martinez</h4>
+                  <p>...</p>
+                  <p>Hace 4 horas</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-2.jpg" class="rounded-circle">
+                <div>
+                  <h4>Pediatra Ana Paez</h4>
+                  <p>...</p>
+                  <p>Hace 6 horas</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="message-item">
+              <a href="#">
+                <img src="assets/img/messages-3.jpg" class="rounded-circle">
+                <div>
+                  <h4>Ginecólogo David Laid</h4>
+                  <p>...</p>
+                  <p>Hace 8 horas</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="dropdown-footer">
+              <a href="#">Ver todos los mensajes</a>
+            </li>
+
+          </ul><!-- Fin Dropdown de mensajes -->
+
+        </li><!-- Fin Nav de mensajes -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">Dr. Kevin Pérez</span>
+          </a><!-- Fin imagen de ícono de perfil -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Pérez</h6>
+              <span>Médico cirujano</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-login.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Cerrar sesión</span>
+              </a>
+            </li>
+
+          </ul><!-- Fin Dropdown de perfil -->
+        </li><!-- Fin Nav de perfil -->
+
+      </ul>
+    </nav><!-- Fin íconos de navegación -->
+
+  </header><!-- Fin del Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="dashboard.html">
+          <i class="bi bi-grid"></i>
+          <span>Panel</span>
+        </a>
+      </li><!-- Fin Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="personal.html">
+          <i class="bi bi-diagram-3-fill"></i>
+          <span>Registrar personal</span>
+        </a>
+      </li><!-- Fin página de personal del nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="paciente.html">
+          <i class="bi bi-file-person"></i>
+          <span>Registrar paciente</span>
+        </a>
+      </li><!-- Fin página de paciente del nav -->
+      
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="cita.html">
+          <i class="bi bi-clipboard-plus"></i>
+          <span>Programar cita</span>
+        </a>
+      </li><!-- Fin página de medicamentos del nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="orden.html">
+          <i class="bi bi-clipboard-plus"></i>
+          <span>Orden médica</span>
+        </a>
+      </li><!-- Fin página de medicamentos del nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="receta.html">
+          <i class="bi bi-clipboard-data"></i>
+          <span>Receta médica</span>
+        </a>
+      </li><!-- Fin página de evolución del nav -->
+      
+    </ul>
+
+  </aside><!-- fin del Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Panel</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="dashboard.html">Inicio</a></li>
+          <li class="breadcrumb-item active">Panel</li>
+        </ol>
+      </nav>
+    </div><!-- Fin título de la barra -->
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Columnas del lado izquierdo -->
+        <div class="col-lg-8">
+          <div class="row">
+
+            <!-- Cartas de ventas -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Filtrar</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Hoy</a></li>
+                    <li><a class="dropdown-item" href="#">Este mes</a></li>
+                    <li><a class="dropdown-item" href="#">Este año</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Consultas vendidas <span>| Hoy</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-cart"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>12</h6>
+                      <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">de incremento</span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- Fin de cartas de venta -->
+
+            <!-- Carta de ganancias -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Filtrar</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Hoy</a></li>
+                    <li><a class="dropdown-item" href="#">Este mes</a></li>
+                    <li><a class="dropdown-item" href="#">Este año</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Ganancias <span>| Este mes</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>$10,264</h6>
+                      <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">de incremento</span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- Fin de carta de ganancias -->
+
+            <!-- Carta de pacientes -->
+            <div class="col-xxl-4 col-xl-12">
+
+              <div class="card info-card customers-card">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Filtrar</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Hoy</a></li>
+                    <li><a class="dropdown-item" href="#">Este mes</a></li>
+                    <li><a class="dropdown-item" href="#">Este año</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Pacientes atendidos <span>| Este año</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>1244</h6>
+                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">de decremento</span>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div><!-- Fin de carta de pacientes -->
+
+            <!-- Reportes -->
+            <div class="col-12">
+              <div class="card">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Filtrar</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Hoy</a></li>
+                    <li><a class="dropdown-item" href="#">Este mes</a></li>
+                    <li><a class="dropdown-item" href="#">Este año</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Reportes <span>/Hoy</span></h5>
+
+                  <!-- Gráfico lineal -->
+                  <div id="reportsChart"></div>
+
+                  <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                      new ApexCharts(document.querySelector("#reportsChart"), {
+                        series: [{
+                          name: 'Ventas',
+                          data: [31, 40, 28, 51, 42, 82, 56],
+                        }, {
+                          name: 'Ganancias',
+                          data: [11, 32, 45, 32, 34, 52, 41]
+                        }, {
+                          name: 'Pacientes',
+                          data: [15, 11, 32, 18, 9, 24, 11]
+                        }],
+                        chart: {
+                          height: 350,
+                          type: 'area',
+                          toolbar: {
+                            show: false
+                          },
+                        },
+                        markers: {
+                          size: 4
+                        },
+                        colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                        fill: {
+                          type: "gradient",
+                          gradient: {
+                            shadeIntensity: 1,
+                            opacityFrom: 0.3,
+                            opacityTo: 0.4,
+                            stops: [0, 90, 100]
+                          }
+                        },
+                        dataLabels: {
+                          enabled: false
+                        },
+                        stroke: {
+                          curve: 'smooth',
+                          width: 2
+                        },
+                        xaxis: {
+                          type: 'datetime',
+                          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                        },
+                        tooltip: {
+                          x: {
+                            format: 'dd/MM/yy HH:mm'
+                          },
+                        }
+                      }).render();
+                    });
+                  </script>
+                  <!-- Fin de gráfico lineal -->
+
+                </div>
+
+              </div>
+            </div><!-- Fin de reporte -->
+
+            <!-- Ventas recientes -->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Filtrar</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Hoy</a></li>
+                    <li><a class="dropdown-item" href="#">Este mes</a></li>
+                    <li><a class="dropdown-item" href="#">Este año</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Ventas recientes <span>| Hoy</span></h5>
+
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Pacientes</th>
+                        <th scope="col">Consultas</th>
+                        <th scope="col">Precios</th>
+                        <th scope="col">Estado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><a href="#">#2457</a></th>
+                        <td>Ana Julio</td>
+                        <td><a href="#" class="text-primary">Neurocirugía</a></td>
+                        <td>$64</td>
+                        <td><span class="badge bg-success">Aprobada</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2147</a></th>
+                        <td>Ernesto Padilla</td>
+                        <td><a href="#" class="text-primary">Reconstrucción facial</a></td>
+                        <td>$47</td>
+                        <td><span class="badge bg-warning">Pendiente</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2049</a></th>
+                        <td>Arelis Martinez</td>
+                        <td><a href="#" class="text-primary">Rinoplastia</a></td>
+                        <td>$147</td>
+                        <td><span class="badge bg-success">Aprobado</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2644</a></th>
+                        <td>Juan Gallego</td>
+                        <td><a href="#" class="text-primar">Implante capilar</a></td>
+                        <td>$67</td>
+                        <td><span class="badge bg-danger">Rechazado</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2644</a></th>
+                        <td>Reiner Brawn</td>
+                        <td><a href="#" class="text-primary">Tratamiento psiquiátrico</a></td>
+                        <td>$165</td>
+                        <td><span class="badge bg-success">Aprobado</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+            </div><!-- Fin de ventas recientes -->
+
+          </div>
+        </div><!-- Fin de columnas lado izquierdo -->
+
+        <!-- Columnas del lado derecho -->
+        <div class="col-lg-4">
+
+          <!-- Actividad reciente -->
+          <div class="card">
+            <div class="filter">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filtrar</h6>
+                </li>
+
+                <li><a class="dropdown-item" href="#">Hoy</a></li>
+                <li><a class="dropdown-item" href="#">Este mes</a></li>
+                <li><a class="dropdown-item" href="#">Este año</a></li>
+              </ul>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Actividad reciente <span>| Hoy</span></h5>
+
+              <div class="activity">
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">32 mi</div>
+                  <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                  <div class="activity-content">
+                    Nuevo <a href="#" class="fw-bold text-dark">mensaje</a>
+                  </div>
+                </div><!-- Fin de item de actividad -->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">56 min</div>
+                  <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
+                  <div class="activity-content"> 
+                    Grave problema de seguridad 
+                  </div>
+                </div><!-- Fin de item de actividad -->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">2 hrs</div>
+                  <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
+                  <div class="activity-content">
+                    Tienes nuevos mensajes sin leer en tu bandeja de entrada
+                  </div>
+                </div><!-- Fin de item de actividad -->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">1 día</div>
+                  <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
+                  <div class="activity-content">
+                    Nueva <a href="#" class="fw-bold text-dark">oferta de trabajo</a>
+                  </div>
+                </div><!-- Fin de item de actividad -->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">2 días</div>
+                  <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
+                  <div class="activity-content">
+                    Revisa tu bandeja de spam
+                  </div>
+                </div><!-- Fin de item de actividad -->
+
+                <div class="activity-item d-flex">
+                  <div class="activite-label">4 sem</div>
+                  <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
+                  <div class="activity-content">
+                    Elimina los correos que ya leíste para ahorrar espacio
+                  </div>
+                </div><!-- Fin de item de actividad -->
+
+              </div>
+
+            </div>
+          </div><!-- Fin de actividad reciente -->
+
+          <!-- Trafico del sitio web -->
+          <div class="card">
+            <div class="filter">
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                <li class="dropdown-header text-start">
+                  <h6>Filtrar</h6>
+                </li>
+
+                <li><a class="dropdown-item" href="#">Today</a></li>
+                <li><a class="dropdown-item" href="#">This Month</a></li>
+                <li><a class="dropdown-item" href="#">This Year</a></li>
+              </ul>
+            </div>
+
+            <div class="card-body pb-0">
+              <h5 class="card-title">Trafico del sito <span>| Hoy</span></h5>
+
+              <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
+
+              <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  echarts.init(document.querySelector("#trafficChart")).setOption({
+                    tooltip: {
+                      trigger: 'item'
+                    },
+                    legend: {
+                      top: '5%',
+                      left: 'center'
+                    },
+                    series: [{
+                      name: 'Formulario de acceso',
+                      type: 'pie',
+                      radius: ['40%', '70%'],
+                      avoidLabelOverlap: false,
+                      label: {
+                        show: false,
+                        position: 'center'
+                      },
+                      emphasis: {
+                        label: {
+                          show: true,
+                          fontSize: '18',
+                          fontWeight: 'bold'
+                        }
+                      },
+                      labelLine: {
+                        show: false
+                      },
+                      data: [{
+                          value: 1048,
+                          name: 'Ventas'
+                        },
+                        {
+                          value: 735,
+                          name: 'Ganancias'
+                        },
+                        {
+                          value: 580,
+                          name: 'Correos'
+                        },
+                        {
+                          value: 484,
+                          name: 'Anuncios'
+                        },
+                        {
+                          value: 300,
+                          name: 'Videos'
+                        }
+                      ]
+                    }]
+                  });
+                });
+              </script>
+
+            </div>
+          </div><!-- Fin del trafico de sitio web -->
+
+        </div><!-- Fin de columnas del lado derecho -->
+
+      </div>
+    </section>
+
+  </main><!-- Fin #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Clínica Santa María.</span></strong>. Todos los derechos reservados
+    </div>
+    <div class="credits">
+      Diseñado por <a href="#">Cristian Dev.</a>
+    </div>
+  </footer><!-- Fin Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
